@@ -35,15 +35,15 @@ Since my teammate refused to cooperate, I am responsible for the whole project.
 
 ## Top module 
 
-### block diagrams
+### Block diagrams
 
 The whole system works following the order below: 
 
-Module `clk_wiz_0` serves as a  clock frequency divider, which provides three outputs: `clk_24m`, `clk_25m` and `clk_50m`. Signal `rst_n` controls the whole system to start or stop, once set to low, module `power_on_delay` outputs a specific signal sequence `pwdn` to module 
+Module **clk_wiz_0** serves as a  clock frequency divider, which provides three outputs: `clk_24m`, `clk_25m` and `clk_50m`. Signal `rst_n` controls the whole system to start or stop, once set to low, module **power_on_delay** outputs a specific signal sequence `pwdn` to module **ov5640_capture** inder to start up OV5640. After completing the after process, the module **I2C_com** start to configure the 250 registers of OV5640. Once finished, the camera start to capture image data with clk `xclk`. The control signal for camera to work properly is 'vsync` and `href`, whos woking principle will be talked about later in the report. The camera module converts the analog signal to digital signal of formation RGB444. The `addr` and `d[7:0]` define the data transfering rules. The image data is kept in module **blk_men_gen_0**, which is a type of RAM. With clock signal synchronized, module **ov5640_vga** outputs the RGB data in RAM. We can see the image displayed on the screen in real time.
 
 ![image](https://github.com/HuaYuXiao/ov5640-VGA/assets/117464811/efe4dbf8-df4c-4290-8a72-6d64c38d3f1c)
 
-### global inputs and outputs
+### Global inputs and outputs
 
 ```VHDL
 entity top is
