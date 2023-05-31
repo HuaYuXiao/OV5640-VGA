@@ -221,12 +221,18 @@ Possible reasons are as follows:
 
 ### Future impvoments
 
+Here is another version of my project. Unfortunately, it is left unfinished.
 
+![QQ截图20230531233838](https://github.com/HuaYuXiao/ov5640-VGA/assets/117464811/648079d7-2ee6-4e2b-bb81-baadae280d49)
 
+It applies **ddr2** rather than **BRAM** to solve problem of insufficient memory space. The read and write rate will be improved too.
+
+![C9505B5F9FF879EE0D7889E6D0E77AA2](https://github.com/HuaYuXiao/ov5640-VGA/assets/117464811/b66fd99d-066c-4f94-941a-370bfc354850)
+
+Moreover, the **i2c** module is modified to be a state machine. Unexpected problems resulted from improper time series will be solved. The figure below reflects the working ASM chart of the I2C driver.
+
+![DD67F10A00031DB0E31B53B3194CE3C5](https://github.com/HuaYuXiao/ov5640-VGA/assets/117464811/5f2074a9-d81f-4661-96c3-c55e4fcf9698)
 
 ## Conclusion
 
-
-
-
-
+In this project, I am scheduled to design a system where image from environment is captured from OV5640 camera, with obtained data processed on FPGA, RGB444 image displayed on an LCD screen via VGA. I learn much knowledge of state machine, I2C, VGA. Sadly, I fail to perfectly cooperate with my teammate, which is the main reason that I fail to complete the whole project. I will try my best to finish the project in the coming summer holiday. Sorry and thanks to all who provide support for me!
