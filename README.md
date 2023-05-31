@@ -174,7 +174,6 @@ end ov5640_vga;
 
 The figure below shows the structure of VGA connection. Here the color standard is RGB444.
 
-https://www.researchgate.net/publication/312984160/figure/fig58/AS:639338928959491@1529441687512/VGA-Connections-from-FPGA-The-basic-colors-that-FPGA-can-display-on-the-screen-are-shown.png
 
 - **Data transmission mode**: VGA adopts analog signal transmission, RGB color signal transmission through 15 pins and synchronization signal transmission through 2 pins.
 
@@ -194,7 +193,38 @@ https://www.researchgate.net/publication/312984160/figure/fig58/AS:6393389289594
 
   - When the vertical sync signal is low, it indicates the end of a frame. The screen finishes displaying one frame and is ready to start the next.
 
-## Results, analyses, limitations
+## Results
+
+The system is able to display in real time, but the image experiences some kind of distortion, and it is manifested in the following aspects specifically:
+
+- Unexpected three extra ghosting
+
+- Mismatch resoltion, and this may results from the above one
+
+- Loss of half of data, which means some white strip appear on the screen
+
+![IMG_1865](https://github.com/HuaYuXiao/ov5640-VGA/assets/117464811/c53c402d-ecd1-4aaf-bf87-f534f43d8fd5)
+
+### Analyses and limitations
+
+Possible reasons are as follows:
+
+- **The clock frequency does not match**: The clock frequency used by the video input and output modules should be the same to maintain correct sampling and transmission of data.
+
+- **Buffer overflow or underflow**: If the data transfer rate does not match between the video input and output modules, it can cause buffer overflow or undercurrent problems.
+
+- **Clock phase skew**: The clock phase of the video input and output modules should be consistent to ensure that the correct data is sampled and transmitted on the clock edges.
+
+- **Data latency mismatch**: The data path delay between the video input and output modules should be equal to keep the data synchronized and aligned.
+
+- **The control signal is incorrect**: The control signals between the video input and output modules should properly coordinate the transmission of data.
+
+### Future impvoments
+
+
+
+
+## Conclusion
 
 
 
