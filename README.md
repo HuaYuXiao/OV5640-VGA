@@ -18,9 +18,9 @@ In this project, I am going to design a system to implement the following functi
 
 ### Development environment
 
-- language: VHDL
+- language: VHDL and verilog
 
-- software: Vivado 2022.2
+- software: Vivado 2017.4 and 2022.2
 
 - protocol: I2C
 
