@@ -10,15 +10,19 @@ In this project, I am going to design a system to implement the following functi
 
 ### Specification
 
-resolution: 640x480
-frame rate: 60 fps
-color standard: RGB444
+- resolution: 640x480
+
+- frame rate: 60 fps
+
+- color standard: RGB444
 
 ### Development environment
 
-language: VHDL
-software: Vivado 2022.2
-protocol: I2C
+- language: VHDL
+
+- software: Vivado 2022.2
+
+- protocol: I2C
 
 ### Extension
 
@@ -39,7 +43,7 @@ Since my teammate refused to cooperate, I am responsible for the whole project.
 
 The whole system works following the order below: 
 
-Module **clk_wiz_0** serves as a  clock frequency divider, which provides three outputs: `clk_24m`, `clk_25m` and `clk_50m`. Signal `rst_n` controls the whole system to start or stop, once set to low, module **power_on_delay** outputs a specific signal sequence `pwdn` to module **ov5640_capture** inder to start up OV5640. After completing the after process, the module **I2C_com** start to configure the 250 registers of OV5640. Once finished, the camera start to capture image data with clk `xclk`. The control signal for camera to work properly is 'vsync` and `href`, whos woking principle will be talked about later in the report. The camera module converts the analog signal to digital signal of formation RGB444. The `addr` and `d[7:0]` define the data transfering rules. The image data is kept in module **blk_men_gen_0**, which is a type of RAM. With clock signal synchronized, module **ov5640_vga** outputs the RGB data in RAM. We can see the image displayed on the screen in real time.
+Module **clk_wiz_0** serves as a  clock frequency divider, which provides three outputs: `clk_24m`, `clk_25m` and `clk_50m`. Signal `rst_n` controls the whole system to start or stop, once set to low, module **power_on_delay** outputs a specific signal sequence `pwdn` to module **ov5640_capture** inder to start up OV5640. After completing the after process, the module **I2C_com** start to configure the 250 registers of OV5640. Once finished, the camera start to capture image data with clk `xclk`. The control signal for camera to work properly is `vsync` and `href`, whose woking principle will be talked about later in the report. The camera module converts the analog signal to digital signal of formation RGB444. The `addr` and `d[7:0]` define the data transfering rules. The image data is kept in module **blk_men_gen_0**, which is a type of RAM. With clock signal synchronized, module **ov5640_vga** outputs the RGB data in RAM. We can see the image displayed on the screen in real time.
 
 ![image](https://github.com/HuaYuXiao/ov5640-VGA/assets/117464811/efe4dbf8-df4c-4290-8a72-6d64c38d3f1c)
 
@@ -96,7 +100,7 @@ The OV5640 is a high-performance 1/4-inch CMOS image sensor designed and manufac
 
 ![th](https://github.com/HuaYuXiao/ov5640-VGA/assets/117464811/3363c16f-faf1-4a56-ac5d-2564dfc40d14)
 
-The following is the port definition of the module:
+The following is the port definition of the module OV5640:
 
 ```VHDL
 entity ov5640_capture is
@@ -137,24 +141,62 @@ Combining the above structure diagram, the working principle of the module is as
 
 - **Control interface**: The OV5640 also provides a control interface that allows external devices to configure and control various parameters of the camera, such as image resolution, exposure time, white balance, etc., via I2C or other communication protocols.
 
-
-
 ### VGA screen
 
 **cost**: 168 yuan
 
+VGA (Video Graphics Array) is a video transmission standard for displaying images, and its principles involve data transmission, synchronization signals and display control. The screen I adopt is an LCD screen, with maximum resolution 1024x600.
+
+The following is the port definition of the module VGA:
+
+```VHDL
+entity ov5640_vga is
+    port ( 
+//clock signal with a frequency of 25 MHz. It synchronizes the data transmission between the device and the VGA display    
+        clk25       : in  STD_LOGIC;
+//4-bit vector representing the red color component of the VGA signal. It determines the intensity of red in each pixel displayed on the screen        
+        vga_red     : out STD_LOGIC_VECTOR(3 downto 0);
+//4-bit vector representing the green color component of the VGA signal. It determines the intensity of green in each pixel displayed on the screen        
+        vga_green   : out STD_LOGIC_VECTOR(3 downto 0);
+//-bit vector representing the blue color component of the VGA signal. It determines the intensity of blue in each pixel displayed on the screen        
+        vga_blue    : out STD_LOGIC_VECTOR(3 downto 0);
+//synchronization signal for the horizontal synchronization of the VGA display. It indicates the beginning of each horizontal line on the screen        
+        vga_hsync   : out STD_LOGIC;
+//synchronization signal for the vertical synchronization of the VGA display. It indicates the beginning of each vertical frame on the screen        
+        vga_vsync   : out STD_LOGIC;
+//18-bit vector representing the address of the current frame being displayed on the VGA screen 
+        frame_addr  : out STD_LOGIC_VECTOR(17 downto 0);
+//12-bit vector representing the pixel data for the current frame. It contains information about the color of each pixel in the frame        
+        frame_pixel : in  STD_LOGIC_VECTOR(11 downto 0)
+    );
+end ov5640_vga;
+```
+
+The figure below shows the structure of VGA connection. Here the color standard is RGB444.
+
+https://www.researchgate.net/publication/312984160/figure/fig58/AS:639338928959491@1529441687512/VGA-Connections-from-FPGA-The-basic-colors-that-FPGA-can-display-on-the-screen-are-shown.png
+
+- **Data transmission mode**: VGA adopts analog signal transmission, RGB color signal transmission through 15 pins and synchronization signal transmission through 2 pins.
+
+  - The red,green and blue signal (4 bits) is transmitted through the red, green and blue pin respectively
+
+  - The hsync and vsync signal identify the beginning and end of each line and frame respectively
+
+- Data transmission process: Taking 640x480@60 as an example, the transmission process of each row of pixels is as follows:
+
+  - When the horizontal sync signal is high, it indicates the start of a line. The data of the red, green and blue color signals is sent and displayed on the screen.
+
+  - When the horizontal sync signal is low, it indicates the end of a line. The screen goes to the display of the next line.
+
+- V-sync signal: V-sync signals are used to identify the beginning and end of a frame. In a full cycle of the v-sync signal, the transmission process of multiple lines of pixels is included.
+
+  - When the vSync signal is high, it indicates the beginning of a frame. The screen displays the first row of pixels starting from the upper-left corner.
+
+  - When the vertical sync signal is low, it indicates the end of a frame. The screen finishes displaying one frame and is ready to start the next.
+
+## Results, analyses, limitations
 
 
 
 
 
-
-
-
-
-
-
-
-
- Test results, analysis of performances, meeting of specifications and
-limitations of the system.
