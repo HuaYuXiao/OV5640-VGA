@@ -141,10 +141,61 @@ Combining the above structure diagram, the working principle of the module is as
 
 - **Control interface**: The OV5640 also provides a control interface that allows external devices to configure and control various parameters of the camera, such as image resolution, exposure time, white balance, etc., via I2C or other communication protocols.
 
+Note that ov5640 requires power up signal for it to start to work.
 
+![image](https://github.com/HuaYuXiao/ov5640-VGA/assets/117464811/a76235a3-9e09-4688-9433-cee1699e7aca)
 
+The codes below show the power up signal of ov5640.
 
+```VHDL
+    -- 5ms
+    process(clk_50M)
+    begin
+        if rising_edge(clk_50M) then
+            if reset_n = '0' then
+                cnt1 <= (others => '0');
+                camera_pwnd_reg <= '1';
+            elsif cnt1 < to_unsigned(2**18-1, cnt1'length) then
+                cnt1 <= cnt1 + 1;
+                camera_pwnd_reg <= '1';
+            else
+                camera_pwnd_reg <= '0';
+            end if;
+        end if;
+    end process;
 
+    -- 1.3ms
+    process(clk_50M)
+    begin
+        if rising_edge(clk_50M) then
+            if camera_pwnd_reg = '1' then
+                cnt2 <= (others => '0');
+                camera_rstn_reg <= '0';
+            elsif cnt2 < to_unsigned(16#ffff#, cnt2'length) then
+                cnt2 <= cnt2 + 1;
+                camera_rstn_reg <= '0';
+            else
+                camera_rstn_reg <= '1';
+            end if;
+        end if;
+    end process;
+
+    -- 21ms
+    process(clk_50M)
+    begin
+        if rising_edge(clk_50M) then
+            if camera_rstn_reg = '0' then
+                cnt3 <= (others => '0');
+                initial_en <= '0';
+            elsif cnt3 < to_unsigned(2**20-1, cnt3'length) then
+                cnt3 <= cnt3 + 1;
+                initial_en <= '0';
+            else
+                initial_en <= '1';
+            end if;
+        end if;
+    end process;
+```
 
 ### VGA screen
 
