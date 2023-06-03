@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Thu Jun  1 00:06:29 2023
+# Process ID: 18124
+# Current directory: D:/iCloudDrive/course/EE332/lab/final/code/0531
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19372 D:\iCloudDrive\course\EE332\lab\final\code\0531\Camera.xpr
+# Log file: D:/iCloudDrive/course/EE332/lab/final/code/0531/vivado.log
+# Journal file: D:/iCloudDrive/course/EE332/lab/final/code/0531\vivado.jou
+#-----------------------------------------------------------
+start_gui
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Jun  1 00:06:48 2023...

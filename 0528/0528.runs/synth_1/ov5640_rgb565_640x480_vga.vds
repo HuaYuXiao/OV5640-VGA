@@ -1,0 +1,151 @@
+#-----------------------------------------------------------
+# Vivado v2022.2.2 (64-bit)
+# SW Build 3788238 on Tue Feb 21 20:00:34 MST 2023
+# IP Build 3783773 on Tue Feb 21 23:41:56 MST 2023
+# Start of session at: Mon May 29 16:25:33 2023
+# Process ID: 7664
+# Current directory: D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.runs/synth_1
+# Command line: vivado.exe -log ov5640_rgb565_640x480_vga.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ov5640_rgb565_640x480_vga.tcl
+# Log file: D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.runs/synth_1/ov5640_rgb565_640x480_vga.vds
+# Journal file: D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.runs/synth_1\vivado.jou
+# Running On: MagicBook, OS: Windows, CPU Frequency: 2096 MHz, CPU Physical cores: 12, Host memory: 16469 MB
+#-----------------------------------------------------------
+source ov5640_rgb565_640x480_vga.tcl -notrace
+Command: synth_design -top ov5640_rgb565_640x480_vga -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 3292
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [D:/software/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+WARNING: [Synth 8-11121] redeclaration of ANSI port 'ui_clk' is not allowed [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:102]
+INFO: [Synth 8-11241] undeclared symbol 'sys_clk_w', assumed default net type 'wire' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:114]
+INFO: [Synth 8-11241] undeclared symbol 'sys_clk', assumed default net type 'wire' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:119]
+WARNING: [Synth 8-6901] identifier 'm_axi_wvalid' is used before its declaration [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:76]
+WARNING: [Synth 8-6901] identifier 'wr_state' is used before its declaration [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:108]
+WARNING: [Synth 8-6901] identifier 'already_wdata_num' is used before its declaration [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:108]
+WARNING: [Synth 8-6901] identifier 'wr_len_total_r' is used before its declaration [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:108]
+WARNING: [Synth 8-6901] identifier 'wr_burst_ctrl_done' is used before its declaration [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:193]
+WARNING: [Synth 8-6901] identifier 'rd_burst_ctrl_done' is used before its declaration [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:238]
+INFO: [Synth 8-11241] undeclared symbol 'clk', assumed default net type 'wire' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_top.v:164]
+INFO: [Synth 8-11241] undeclared symbol 'read_fifo_almost_full', assumed default net type 'wire' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_top.v:194]
+INFO: [Synth 8-11241] undeclared symbol 'ui_clk', assumed default net type 'wire' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ov5640_rgb565_640x480_vga.v:83]
+INFO: [Synth 8-11241] undeclared symbol 'init_calib_complete', assumed default net type 'wire' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ov5640_rgb565_640x480_vga.v:109]
+INFO: [Synth 8-11241] undeclared symbol 'rst', assumed default net type 'wire' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ov5640_rgb565_640x480_vga.v:126]
+INFO: [Synth 8-11241] undeclared symbol 'vga_scl', assumed default net type 'wire' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ov5640_rgb565_640x480_vga.v:132]
+INFO: [Synth 8-11241] undeclared symbol 'vga_sda', assumed default net type 'wire' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ov5640_rgb565_640x480_vga.v:133]
+INFO: [Synth 8-11241] undeclared symbol 'read_req', assumed default net type 'wire' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ov5640_rgb565_640x480_vga.v:161]
+INFO: [Synth 8-11241] undeclared symbol 'read_req_ack', assumed default net type 'wire' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ov5640_rgb565_640x480_vga.v:162]
+INFO: [Synth 8-11241] undeclared symbol 'read_en', assumed default net type 'wire' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ov5640_rgb565_640x480_vga.v:163]
+INFO: [Synth 8-11241] undeclared symbol 'read_data_ori', assumed default net type 'wire' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ov5640_rgb565_640x480_vga.v:164]
+INFO: [Synth 8-11241] undeclared symbol 'cmos_wr_req', assumed default net type 'wire' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ov5640_rgb565_640x480_vga.v:172]
+INFO: [Synth 8-11241] undeclared symbol 'clk_25m', assumed default net type 'wire' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ov5640_rgb565_640x480_vga.v:201]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1255.578 ; gain = 406.258
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'ov5640_rgb565_640x480_vga' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ov5640_rgb565_640x480_vga.v:4]
+INFO: [Synth 8-6157] synthesizing module 'mmcm' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.runs/synth_1/.Xil/Vivado-7664-MagicBook/realtime/mmcm_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mmcm' (0#1) [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.runs/synth_1/.Xil/Vivado-7664-MagicBook/realtime/mmcm_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'i2c_ov5640_rgb565_cfg' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/i2c_ov5640_rgb565_cfg.v:4]
+	Parameter CMOS_H_PIXEL bound to: 24'b000000000000001010000000 
+	Parameter CMOS_V_PIXEL bound to: 24'b000000000000000111100000 
+INFO: [Synth 8-6155] done synthesizing module 'i2c_ov5640_rgb565_cfg' (0#1) [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/i2c_ov5640_rgb565_cfg.v:4]
+INFO: [Synth 8-6157] synthesizing module 'i2c_dri' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/i2c_dri.v:4]
+	Parameter SLAVE_ADDR bound to: 7'b0111100 
+	Parameter CLK_FREQ bound to: 26'b11110111111101001001000000 
+	Parameter I2C_FREQ bound to: 18'b111101000010010000 
+INFO: [Synth 8-155] case statement is not full and has no default [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/i2c_dri.v:188]
+INFO: [Synth 8-6155] done synthesizing module 'i2c_dri' (0#1) [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/i2c_dri.v:4]
+INFO: [Synth 8-6157] synthesizing module 'i2c_config' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/i2c_config.v:4]
+INFO: [Synth 8-6157] synthesizing module 'i2c_master_top' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/i2c_master_top.v:4]
+INFO: [Synth 8-226] default block is never used [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/i2c_master_top.v:75]
+INFO: [Synth 8-6157] synthesizing module 'i2c_master_byte_ctrl' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/i2c_master_byte_ctrl.v:10]
+INFO: [Synth 8-6157] synthesizing module 'i2c_master_bit_ctrl' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/i2c_master_bit_ctrl.v:48]
+INFO: [Synth 8-6155] done synthesizing module 'i2c_master_bit_ctrl' (0#1) [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/i2c_master_bit_ctrl.v:48]
+INFO: [Synth 8-6155] done synthesizing module 'i2c_master_byte_ctrl' (0#1) [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/i2c_master_byte_ctrl.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'i2c_master_top' (0#1) [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/i2c_master_top.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'i2c_config' (0#1) [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/i2c_config.v:4]
+WARNING: [Synth 8-7071] port 'lut_index' of module 'i2c_config' is unconnected for instance 'i2c_config' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ov5640_rgb565_640x480_vga.v:125]
+WARNING: [Synth 8-7071] port 'lut_dev_addr' of module 'i2c_config' is unconnected for instance 'i2c_config' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ov5640_rgb565_640x480_vga.v:125]
+WARNING: [Synth 8-7071] port 'lut_reg_addr' of module 'i2c_config' is unconnected for instance 'i2c_config' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ov5640_rgb565_640x480_vga.v:125]
+WARNING: [Synth 8-7071] port 'lut_reg_data' of module 'i2c_config' is unconnected for instance 'i2c_config' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ov5640_rgb565_640x480_vga.v:125]
+WARNING: [Synth 8-7023] instance 'i2c_config' of module 'i2c_config' has 12 connections declared, but only 8 given [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ov5640_rgb565_640x480_vga.v:125]
+INFO: [Synth 8-6157] synthesizing module 'cmos_capture_data' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/cmos_capture_data.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'cmos_capture_data' (0#1) [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/cmos_capture_data.v:4]
+WARNING: [Synth 8-7071] port 'cmos_wr_req' of module 'cmos_capture_data' is unconnected for instance 'u_cmos_capture_data' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ov5640_rgb565_640x480_vga.v:137]
+WARNING: [Synth 8-7023] instance 'u_cmos_capture_data' of module 'cmos_capture_data' has 10 connections declared, but only 9 given [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ov5640_rgb565_640x480_vga.v:137]
+INFO: [Synth 8-6157] synthesizing module 'ddr2_top' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_top.v:4]
+INFO: [Synth 8-6157] synthesizing module 'req_pend_fifo' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.runs/synth_1/.Xil/Vivado-7664-MagicBook/realtime/req_pend_fifo_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'req_pend_fifo' (0#1) [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.runs/synth_1/.Xil/Vivado-7664-MagicBook/realtime/req_pend_fifo_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'read_fifo' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.runs/synth_1/.Xil/Vivado-7664-MagicBook/realtime/read_fifo_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'read_fifo' (0#1) [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.runs/synth_1/.Xil/Vivado-7664-MagicBook/realtime/read_fifo_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'write_fifo' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.runs/synth_1/.Xil/Vivado-7664-MagicBook/realtime/write_fifo_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'write_fifo' (0#1) [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.runs/synth_1/.Xil/Vivado-7664-MagicBook/realtime/write_fifo_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'ddr2_axi' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:4]
+INFO: [Synth 8-6157] synthesizing module 'IBUFDS' [D:/software/Vivado/2022.2/scripts/rt/data/unisim_comp.v:71342]
+INFO: [Synth 8-6155] done synthesizing module 'IBUFDS' (0#1) [D:/software/Vivado/2022.2/scripts/rt/data/unisim_comp.v:71342]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [D:/software/Vivado/2022.2/scripts/rt/data/unisim_comp.v:1082]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [D:/software/Vivado/2022.2/scripts/rt/data/unisim_comp.v:1082]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:178]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:223]
+INFO: [Synth 8-6157] synthesizing module 'mig' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.runs/synth_1/.Xil/Vivado-7664-MagicBook/realtime/mig_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mig' (0#1) [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.runs/synth_1/.Xil/Vivado-7664-MagicBook/realtime/mig_stub.v:5]
+WARNING: [Synth 8-689] width (15) of port connection 'ddr2_addr' does not match port width (14) of module 'mig' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:414]
+ERROR: [Synth 8-448] named port connection 'ddr2_reset_n' does not exist for instance 'u_ddr2' of module 'mig' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:421]
+WARNING: [Synth 8-689] width (32) of port connection 'ddr2_dq' does not match port width (16) of module 'mig' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:423]
+WARNING: [Synth 8-689] width (4) of port connection 'ddr2_dqs_n' does not match port width (2) of module 'mig' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:424]
+WARNING: [Synth 8-689] width (4) of port connection 'ddr2_dqs_p' does not match port width (2) of module 'mig' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:425]
+WARNING: [Synth 8-689] width (4) of port connection 'ddr2_dm' does not match port width (2) of module 'mig' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:429]
+ERROR: [Synth 8-448] named port connection 'mmcm_locked' does not exist for instance 'u_ddr2' of module 'mig' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:434]
+ERROR: [Synth 8-448] named port connection 'aresetn' does not exist for instance 'u_ddr2' of module 'mig' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:435]
+ERROR: [Synth 8-448] named port connection 's_axi_awid' does not exist for instance 'u_ddr2' of module 'mig' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:443]
+ERROR: [Synth 8-448] named port connection 's_axi_awaddr' does not exist for instance 'u_ddr2' of module 'mig' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:444]
+ERROR: [Synth 8-448] named port connection 's_axi_awlen' does not exist for instance 'u_ddr2' of module 'mig' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:445]
+ERROR: [Synth 8-448] named port connection 's_axi_awsize' does not exist for instance 'u_ddr2' of module 'mig' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:446]
+ERROR: [Synth 8-448] named port connection 's_axi_awburst' does not exist for instance 'u_ddr2' of module 'mig' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:447]
+ERROR: [Synth 8-448] named port connection 's_axi_awlock' does not exist for instance 'u_ddr2' of module 'mig' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:448]
+ERROR: [Synth 8-448] named port connection 's_axi_awcache' does not exist for instance 'u_ddr2' of module 'mig' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:449]
+ERROR: [Synth 8-448] named port connection 's_axi_awprot' does not exist for instance 'u_ddr2' of module 'mig' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:450]
+ERROR: [Synth 8-448] named port connection 's_axi_awqos' does not exist for instance 'u_ddr2' of module 'mig' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:451]
+ERROR: [Synth 8-448] named port connection 's_axi_awvalid' does not exist for instance 'u_ddr2' of module 'mig' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:452]
+ERROR: [Synth 8-448] named port connection 's_axi_awready' does not exist for instance 'u_ddr2' of module 'mig' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:453]
+ERROR: [Synth 8-448] named port connection 's_axi_wdata' does not exist for instance 'u_ddr2' of module 'mig' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:455]
+ERROR: [Synth 8-448] named port connection 's_axi_wstrb' does not exist for instance 'u_ddr2' of module 'mig' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:456]
+ERROR: [Synth 8-448] named port connection 's_axi_wlast' does not exist for instance 'u_ddr2' of module 'mig' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:457]
+ERROR: [Synth 8-448] named port connection 's_axi_wvalid' does not exist for instance 'u_ddr2' of module 'mig' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:458]
+ERROR: [Synth 8-448] named port connection 's_axi_wready' does not exist for instance 'u_ddr2' of module 'mig' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:459]
+ERROR: [Synth 8-448] named port connection 's_axi_bid' does not exist for instance 'u_ddr2' of module 'mig' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:461]
+ERROR: [Synth 8-448] named port connection 's_axi_bresp' does not exist for instance 'u_ddr2' of module 'mig' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:462]
+ERROR: [Synth 8-448] named port connection 's_axi_bvalid' does not exist for instance 'u_ddr2' of module 'mig' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:463]
+ERROR: [Synth 8-448] named port connection 's_axi_bready' does not exist for instance 'u_ddr2' of module 'mig' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:464]
+ERROR: [Synth 8-448] named port connection 's_axi_arid' does not exist for instance 'u_ddr2' of module 'mig' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:466]
+ERROR: [Synth 8-448] named port connection 's_axi_araddr' does not exist for instance 'u_ddr2' of module 'mig' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:467]
+ERROR: [Synth 8-448] named port connection 's_axi_arlen' does not exist for instance 'u_ddr2' of module 'mig' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:468]
+ERROR: [Synth 8-448] named port connection 's_axi_arsize' does not exist for instance 'u_ddr2' of module 'mig' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:469]
+ERROR: [Synth 8-448] named port connection 's_axi_arburst' does not exist for instance 'u_ddr2' of module 'mig' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:470]
+ERROR: [Synth 8-448] named port connection 's_axi_arlock' does not exist for instance 'u_ddr2' of module 'mig' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:471]
+ERROR: [Synth 8-448] named port connection 's_axi_arcache' does not exist for instance 'u_ddr2' of module 'mig' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:472]
+ERROR: [Synth 8-448] named port connection 's_axi_arprot' does not exist for instance 'u_ddr2' of module 'mig' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:473]
+ERROR: [Synth 8-448] named port connection 's_axi_arqos' does not exist for instance 'u_ddr2' of module 'mig' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:474]
+ERROR: [Synth 8-448] named port connection 's_axi_arvalid' does not exist for instance 'u_ddr2' of module 'mig' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:475]
+ERROR: [Synth 8-448] named port connection 's_axi_arready' does not exist for instance 'u_ddr2' of module 'mig' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:476]
+ERROR: [Synth 8-448] named port connection 's_axi_rid' does not exist for instance 'u_ddr2' of module 'mig' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:478]
+ERROR: [Synth 8-448] named port connection 's_axi_rdata' does not exist for instance 'u_ddr2' of module 'mig' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:479]
+ERROR: [Synth 8-448] named port connection 's_axi_rresp' does not exist for instance 'u_ddr2' of module 'mig' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:480]
+ERROR: [Synth 8-448] named port connection 's_axi_rlast' does not exist for instance 'u_ddr2' of module 'mig' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:481]
+ERROR: [Synth 8-448] named port connection 's_axi_rvalid' does not exist for instance 'u_ddr2' of module 'mig' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:482]
+ERROR: [Synth 8-448] named port connection 's_axi_rready' does not exist for instance 'u_ddr2' of module 'mig' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:483]
+ERROR: [Synth 8-6156] failed synthesizing module 'ddr2_axi' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_axi.v:4]
+ERROR: [Synth 8-6156] failed synthesizing module 'ddr2_top' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ddr2_top.v:4]
+ERROR: [Synth 8-6156] failed synthesizing module 'ov5640_rgb565_640x480_vga' [D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.srcs/sources_1/new/ov5640_rgb565_640x480_vga.v:4]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1351.961 ; gain = 502.641
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Synthesis
+57 Infos, 19 Warnings, 0 Critical Warnings and 44 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Mon May 29 16:25:59 2023...

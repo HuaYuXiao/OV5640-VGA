@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.2.2 (64-bit)
+# SW Build 3788238 on Tue Feb 21 20:00:34 MST 2023
+# IP Build 3783773 on Tue Feb 21 23:41:56 MST 2023
+# Start of session at: Sun May 28 15:19:37 2023
+# Process ID: 10480
+# Current directory: D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.runs/req_pend_fifo_synth_1
+# Command line: vivado.exe -log req_pend_fifo.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source req_pend_fifo.tcl
+# Log file: D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.runs/req_pend_fifo_synth_1/req_pend_fifo.vds
+# Journal file: D:/iCloudDrive/course/EE332/lab/final/code/0528/0528.runs/req_pend_fifo_synth_1\vivado.jou
+# Running On: MagicBook, OS: Windows, CPU Frequency: 2096 MHz, CPU Physical cores: 12, Host memory: 16469 MB
+#-----------------------------------------------------------
+source req_pend_fifo.tcl -notrace

@@ -1,0 +1,3 @@
+mmcm_clk_wiz.v,verilog,xil_defaultlib,../../../../cam2hdmi.gen/sources_1/ip/mmcm/mmcm_clk_wiz.v,incdir="$ref_dir/../../../ipstatic"incdir="../../../../cam2hdmi.gen/sources_1/ip/mmcm"
+mmcm.v,verilog,xil_defaultlib,../../../../cam2hdmi.gen/sources_1/ip/mmcm/mmcm.v,incdir="$ref_dir/../../../ipstatic"incdir="../../../../cam2hdmi.gen/sources_1/ip/mmcm"
+glbl.v,Verilog,xil_defaultlib,glbl.v
