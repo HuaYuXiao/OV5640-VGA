@@ -1,6 +1,8 @@
-# ov5640-VGA
+# OV5640-VGA
 
-12010508 Yuxiao Hua
+![Static Badge](https://img.shields.io/badge/VHDL-_-blue)
+![Static Badge](https://img.shields.io/badge/Verilog-_-blue)
+![Static Badge](https://img.shields.io/badge/Vivado-2022.2-green?logo=xilinx)
 
 ## System description
 
@@ -15,14 +17,6 @@ In this project, I am going to design a system to implement the following functi
 - frame rate: 60 fps
 
 - color standard: RGB444
-
-### Development environment
-
-- language: VHDL and verilog
-
-- software: Vivado 2017.4 and 2022.2
-
-- protocol: I2C
 
 ### Extension
 
